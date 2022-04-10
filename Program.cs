@@ -7,7 +7,14 @@ using NewsMediaMvc.Data;
 using System;
 
 
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<CommentsContext>(options =>
+
+
+
+    options.UseSqlite(builder.Configuration.GetConnectionString("CommentsContext")));
 
 if (builder.Environment.IsDevelopment())
 {
@@ -20,10 +27,10 @@ else
         options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionNewsMediaDbContext")));
 }
 builder.Services.AddDbContext<NewsMediaDbContext>(options =>
-    options.UseSqlServer());
+    options.UseSqlite(builder.Configuration.GetConnectionString("NewsMediaDbContext")));
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<NewsMediaMvcIdentityDbContext>();builder.Services.AddDbContext<NewsMediaMvcIdentityDbContext>(options =>
-    options.UseSqlServer());
+    options.UseSqlite(builder.Configuration.GetConnectionString("NewsMediaDbContext")));
 
 
 // Add services to the container.

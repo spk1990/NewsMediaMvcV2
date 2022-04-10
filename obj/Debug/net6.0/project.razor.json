@@ -16348,18 +16348,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Comments/Index.cshtml",
+      "TargetPath": "Views\\Comments\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Shared/_LoginPartial.cshtml",
       "TargetPath": "Views\\Shared\\_LoginPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Home/Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Areas/Identity/Pages/_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Areas/Identity/Pages/_ViewImports.cshtml",
-      "TargetPath": "Areas\\Identity\\Pages\\_ViewImports.cshtml",
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Comments/Delete.cshtml",
+      "TargetPath": "Views\\Comments\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16395,6 +16400,21 @@
     {
       "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Shared/Error.cshtml",
       "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Comments/Details.cshtml",
+      "TargetPath": "Views\\Comments\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Comments/Edit.cshtml",
+      "TargetPath": "Views\\Comments\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Comments/Create.cshtml",
+      "TargetPath": "Views\\Comments\\Create.cshtml",
       "FileKind": "mvc"
     }
   ],

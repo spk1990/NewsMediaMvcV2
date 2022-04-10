@@ -16,7 +16,6 @@ public class Report
         [MaxLength(250)]
         public string? Description { get; set; }
         
-        
         [Required]
         [MaxLength(5000)]
          public string? Body {get; set; }
