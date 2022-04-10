@@ -1,4 +1,10 @@
+@using Microsoft.AspNetCore.Identity
+@using System
+@using System.ComponentModel
 @model Reports.Models.Report
+@inject SignInManager<IdentityUser> SignInManager 
+@inject UserManager<IdentityUser> UserManager
+
 
 @{
     ViewData["Title"] = "Create";
@@ -28,9 +34,9 @@
                 <span asp-validation-for="Body" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CreatedBy" class="control-label"></label>
-                <input asp-for="CreatedBy" class="form-control" />
-                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+                <label asp-for="CreatedBy" class="control-label" hidden></label>
+                <input asp-for="CreatedBy" class="form-control" value="@UserManager.GetUserId(User)" disabled hidden />
+                @*<span asp-validation-for="CreatedBy" class="text-danger"></span>*@
             </div>
             <div class="form-group">
                 <label asp-for="CreatedDate" class="control-label"></label>
