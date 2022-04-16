@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace NewsMediaMvc.Migrations
 {
-    [DbContext(typeof(NewsMediaDbContext))]
-    partial class NewsMediaDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(ReportsContext))]
+    partial class ReportsContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {

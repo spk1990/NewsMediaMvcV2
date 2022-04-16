@@ -7,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using Reports.Models;
 
 
-    public class NewsMediaDbContext : DbContext
+    public class ReportsContext : DbContext
     {
-        public NewsMediaDbContext (DbContextOptions<NewsMediaDbContext> options)
+        public ReportsContext (DbContextOptions<ReportsContext> options)
             : base(options)
         {
         }

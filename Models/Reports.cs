@@ -30,5 +30,6 @@ public class Report
         [DisplayName("Last Modified")]
         public DateTime LastUpdatedDate { get; set; }
         public string? Category { get; set; }
+        
 }
 }

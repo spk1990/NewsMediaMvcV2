@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace NewsMediaMvc.Migrations
 {
-    [DbContext(typeof(NewsMediaDbContext))]
-    [Migration("20220410135925_SecondIdentitySchema")]
-    partial class SecondIdentitySchema
+    [DbContext(typeof(ReportsContext))]
+    [Migration("20220411175459_NewMigration")]
+    partial class NewMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

@@ -5,10 +5,13 @@ using Microsoft.AspNetCore.Identity;
 using NewsMediaMvc.Areas.Identity.Data;
 using NewsMediaMvc.Data;
 using System;
+using NewsMediaMvc.Services;
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddHttpClient<ReportsApiClient>();
 
 builder.Services.AddDbContext<CommentsContext>(options =>
 
@@ -18,19 +21,19 @@ builder.Services.AddDbContext<CommentsContext>(options =>
 
 if (builder.Environment.IsDevelopment())
 {
-    builder.Services.AddDbContext<NewsMediaDbContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("NewsMediaDbContext")));
+    builder.Services.AddDbContext<ReportsContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("ReportsContext")));
 }
 else
 {
-    builder.Services.AddDbContext<NewsMediaDbContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionNewsMediaDbContext")));
+    builder.Services.AddDbContext<ReportsContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionReportsContext")));
 }
-builder.Services.AddDbContext<NewsMediaDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("NewsMediaDbContext")));
+builder.Services.AddDbContext<ReportsContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("ReportsContext")));
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<NewsMediaMvcIdentityDbContext>();builder.Services.AddDbContext<NewsMediaMvcIdentityDbContext>(options =>
-    options.UseSqlite(builder.Configuration.GetConnectionString("NewsMediaDbContext")));
+    options.UseSqlite(builder.Configuration.GetConnectionString("ReportsContext")));
 
 
 // Add services to the container.

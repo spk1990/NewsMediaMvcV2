@@ -11,8 +11,8 @@ using NewsMediaMvc.Areas.Identity.Data;
 namespace NewsMediaMvc.Migrations.NewsMediaMvcIdentityDb
 {
     [DbContext(typeof(NewsMediaMvcIdentityDbContext))]
-    [Migration("20220410151557_ThirdIdentitySchema")]
-    partial class ThirdIdentitySchema
+    [Migration("20220411181452_SecondMigration")]
+    partial class SecondMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

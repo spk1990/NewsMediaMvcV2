@@ -10,9 +10,9 @@ namespace NewsMediaMvc.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new NewsMediaDbContext(
+            using (var context = new ReportsContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<NewsMediaDbContext>>()))
+                    DbContextOptions<ReportsContext>>()))
             {
                 // Look for any Reports.
                 if (context.Reports.Any())

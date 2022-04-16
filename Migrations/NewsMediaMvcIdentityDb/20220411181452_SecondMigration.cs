@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace NewsMediaMvc.Migrations.NewsMediaMvcIdentityDb
 {
-    public partial class ThirdIdentitySchema : Migration
+    public partial class SecondMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
