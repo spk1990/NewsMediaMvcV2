@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Category/Business.cshtml",
+      "TargetPath": "Views\\Category\\Business.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Reports/Create.cshtml",
       "TargetPath": "Views\\Reports\\Create.cshtml",
       "FileKind": "mvc"
@@ -16330,6 +16335,16 @@
     {
       "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Areas/Identity/Pages/Account/_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Category/Index.cshtml",
+      "TargetPath": "Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/seankeenan/Projects/NewsMediaMvc/Views/Category/World.cshtml",
+      "TargetPath": "Views\\Category\\World.cshtml",
       "FileKind": "mvc"
     },
     {

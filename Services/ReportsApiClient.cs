@@ -13,11 +13,14 @@ namespace NewsMediaMvc.Services
     {
         public HttpClient Client {get; set;}
 
+
+        //Get Method
+
         public ReportsApiClient(HttpClient client) {
 
             client.BaseAddress = new System.Uri("https://localhost:7240");
 
-            client.DefaultRequestHeaders.Add("Accept", "application.json");
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
 
             Client = client;
         }
@@ -26,5 +29,13 @@ namespace NewsMediaMvc.Services
         {
             return await Client.GetFromJsonAsync<IEnumerable<Report>>("/api/Report");
         }
+
+        //Post Mehtod
+        //public async Task<IAsyncResult<Report>> PostReportsList()
+       // {
+            //return await Client.PostAsJsonAsync<IAsyncResult<Report>>("/api/Report");
+        //}
+
+
     }
 }

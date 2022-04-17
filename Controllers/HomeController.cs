@@ -1,31 +1,61 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using NewsMediaMvc.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Reports.Models;
 
 namespace NewsMediaMvc.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ReportsContext _context;
+    //private readonly ReportsApiClient _ReportsApiContext;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
-        _logger = logger;
-    }
+        public HomeController(ReportsContext context)
+        {
+            _context = context;
+        }
 
-    public IActionResult Index()
-    {
-        return View();
-    }
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        {
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            ViewData["CurrentFilter"] = searchString;
+            var reports = from s in _context.Reports
+                        select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                reports = reports.Where(s => s.ReportName.Contains(searchString)
+                                    || s.Category.Contains(searchString));
+            }            
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    reports = reports.OrderByDescending(s => s.ReportName);
+                    break;
+                case "Date":
+                    reports = reports.OrderBy(s => s.CreatedDate);
+                    break;
+                case "date_desc":
+                    reports = reports.OrderByDescending(s => s.CreatedDate);
+                    break;
+                default:
+                    reports = reports.OrderBy(s => s.ReportName);
+                    break;
+            }
+            return View(await reports.AsNoTracking().ToListAsync());
+        }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
+        
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
+        private bool ReportsExists(int id)
+        {
+            return _context.Reports.Any(e => e.Id == id);
+        }
+
+        
+
+
+
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Reports.Models;
+using NewsMediaMvc.Services;
 
 namespace NewsMediaMvc.Controllers
 {
@@ -14,15 +15,19 @@ namespace NewsMediaMvc.Controllers
     {
         private readonly ReportsContext _context;
 
-        public ReportsController(ReportsContext context)
+        private readonly ReportsApiClient _ReportsApiContext;
+
+        public ReportsController(ReportsContext context,ReportsApiClient ReportsApiContext)
         {
             _context = context;
+            _ReportsApiContext = ReportsApiContext;
         }
 
         // GET: Reports
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Reports.ToListAsync());
+            //return View(await _context.Reports.ToListAsync());
+            return View(await _ReportsApiContext.GetReportsList());
         }
 
         // GET: Reports/Details/5
@@ -50,8 +55,7 @@ namespace NewsMediaMvc.Controllers
         }
 
         // POST: Reports/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,ReportName,Description,Body,CreatedBy,CreatedDate,LastUpdatedDate,Category")] Report reports)
