@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FcairEqk4aa2bNLqR7omGf/Xz6J2hlYrh5k/cwHSeAQ8Us+1iWs2ZDw6chAw/3sr+x3YDWMoDiQ4QnEyWm8WKQ==",
+  "dgSpecHash": "vUXvYHGRjOCu/2D5NeJ2W1JKhHkguSDXabCUwM8IgDba5AIQguodA8/cOG8n8ybZ35z5Fnu1/KB7Q0ivQhhTyQ==",
   "success": true,
-  "projectFilePath": "/Users/seankeenan/Projects/NewsMediaMvc/NewsMediaMvc.csproj",
+  "projectFilePath": "/Users/seankeenan/Projects/NewsMediaMvcV2/NewsMediaMvc.csproj",
   "expectedPackageFiles": [
     "/Users/seankeenan/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/seankeenan/.nuget/packages/messagepack/2.1.152/messagepack.2.1.152.nupkg.sha512",

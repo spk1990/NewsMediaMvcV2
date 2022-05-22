@@ -10231,11 +10231,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/seankeenan/Projects/NewsMediaMvc/NewsMediaMvc.csproj",
+      "projectUniqueName": "/Users/seankeenan/Projects/NewsMediaMvcV2/NewsMediaMvc.csproj",
       "projectName": "NewsMediaMvc",
-      "projectPath": "/Users/seankeenan/Projects/NewsMediaMvc/NewsMediaMvc.csproj",
+      "projectPath": "/Users/seankeenan/Projects/NewsMediaMvcV2/NewsMediaMvc.csproj",
       "packagesPath": "/Users/seankeenan/.nuget/packages/",
-      "outputPath": "/Users/seankeenan/Projects/NewsMediaMvc/obj/",
+      "outputPath": "/Users/seankeenan/Projects/NewsMediaMvcV2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/seankeenan/.nuget/NuGet/NuGet.Config"
